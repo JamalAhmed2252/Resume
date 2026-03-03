@@ -1,4 +1,3 @@
-
 /* Reset */
 * {
     margin: 0;
@@ -8,69 +7,85 @@
 }
 
 body {
-    background-color: #f2f2f2;
+    background-color: #0d0d0d; /* Dark background */
     padding: 30px;
+    color: #eee;
 }
 
 /* Main Container */
 .cv-container {
     max-width: 850px;
     margin: auto;
-    background: #ffffff;
+    background: #1c1c1c; /* Dark card background */
     padding: 50px;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
 }
 
 /* Name */
 h1 {
     text-align: center;
-    font-size: 34px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #f0a500; /* Accent color */
+    text-shadow: 2px 2px 5px #000;
 }
 
 /* Contact Info */
 .contact-info {
     text-align: center;
     font-size: 14px;
-    color: #555;
-    margin-bottom: 35px;
+    color: #bbb;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
 }
 
 /* Sections */
 .section {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 /* Section Titles */
 .section h2 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 18px;
     padding-bottom: 6px;
-    border-bottom: 1px solid #ccc;
-    color: #111;
+    border-bottom: 2px solid #444;
+    color: #f0a500; /* Accent color */
 }
 
 /* Paragraph */
 .section p {
     font-size: 16px;
-    color: #333;
-    line-height: 1.7;
+    color: #ddd;
+    line-height: 1.8;
 }
 
 /* Lists */
 ul {
     list-style-type: square;
-    padding-left: 20px;
+    padding-left: 25px;
 }
 
 ul li {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-size: 15px;
-    color: #333;
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+ul li:hover {
+    color: #f0a500;
 }
 
 /* Flex Layout */
@@ -87,8 +102,19 @@ ul li {
         gap: 30px;
     }
 }
-@media (max-width: 768px) {
-    .flex {
-        flex-direction: column;
-    }
+
+/* Optional: Links */
+a {
+    color: #f0a500;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Optional: Skill Bars or Highlights */
+.highlight {
+    color: #f0a500;
+    font-weight: 600;
 }
