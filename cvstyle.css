@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,54 +6,78 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Background */
 body {
-    background-color: #f4f4f4;
+    background-color: #f0f2f5;
     padding: 40px;
 }
 
+/* Main CV Box */
 .cv-container {
     max-width: 800px;
     margin: auto;
     background: #ffffff;
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* Name */
 h1 {
     text-align: center;
-    margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: #222;
 }
 
+/* Contact Info */
 .contact-info {
     text-align: center;
+    color: #666;
     font-size: 14px;
     margin-bottom: 30px;
-    color: gray;
 }
 
+/* Sections */
 .section {
     margin-bottom: 30px;
 }
 
+/* Section Headings */
 .section h2 {
+    font-size: 18px;
+    color: #0077b6;
     margin-bottom: 10px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
+    border-bottom: 2px solid #0077b6;
+    padding-bottom: 4px;
 }
 
-.section p, .section ul {
-    margin-top: 5px;
+/* Paragraph & List */
+.section p {
     font-size: 15px;
+    color: #333;
+    line-height: 1.6;
 }
 
 ul {
-    list-style: square;
     margin-left: 20px;
 }
 
+ul li {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+/* Flex Layout (Skills section) */
 .flex {
     display: flex;
-    justify-content: space-between;
-    gap: 50px;
+    gap: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
 }
